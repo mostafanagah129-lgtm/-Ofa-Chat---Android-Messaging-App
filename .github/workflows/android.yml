@@ -1,3 +1,4 @@
+
 name: Build Ofa Chat APK
 
 on:
@@ -14,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: actions/setup-java@v4
+      - uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: '17'
@@ -37,7 +38,7 @@ jobs:
           test -f app/google-services.json
 
       - name: Build APK
-        run: gradle --no-daemon assembleDebug
+        run: gradle --no-daemon --stacktrace --info assembleDebug
 
       - uses: actions/upload-artifact@v4
         with:
