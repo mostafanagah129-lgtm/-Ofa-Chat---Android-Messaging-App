@@ -31,7 +31,7 @@ jobs:
 
       - name: Extract Ofa Chat project
         run: |
-          unzip -q Ofa-Chat-Full-Foundation.zip -d extracted
+          unzip -q Ofa-Chat-Full-Foundation-Fixed.zip -d extracted
           test -d extracted/OfaChat-Full-Foundation/android
           cp -R extracted/OfaChat-Full-Foundation/android ./android
 
